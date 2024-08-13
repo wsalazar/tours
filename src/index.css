@@ -106,6 +106,7 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
+  height: 3rem;
 }
 
 .text {
@@ -228,6 +229,10 @@ ul {
   }
 }
 
+.container {
+  display: flex;
+}
+
 .loading {
   width: 6rem;
   height: 6rem;
@@ -252,7 +257,7 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
-main {
+.main {
   width: 90vw;
   max-width: var(--max-width);
   margin: 5rem auto;
@@ -270,6 +275,7 @@ main {
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   position: relative;
+  padding: 2rem 0;
 }
 
 .single-tour:hover {
@@ -286,14 +292,12 @@ main {
   background: var(--primary-500);
   border-top-right-radius: var(--borderRadius);
 }
-.single-tour .img {
-  height: 20rem;
-  border-top-right-radius: var(--borderRadius);
-  border-top-left-radius: var(--borderRadius);
-}
 
-.tour-info {
-  padding: 2rem 1.5rem;
+.single-tour img {
+  height: 20rem;
+  width: 100%;
+  /* border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius); */
 }
 
 .tour-info h5 {
@@ -306,6 +310,7 @@ main {
   margin-bottom: 1.25rem;
   line-height: 1.5;
   color: var(--grey-500);
+  padding: 1rem 1.5rem;
 }
 .info-btn,
 .delete-btn {
@@ -315,13 +320,20 @@ main {
   cursor: pointer;
 }
 .info-btn {
-  color: var(--primary-500);
+  color: var(--white);
   font-weight: 600;
+  width: 100%;
+  background: var(--primary-500);
 }
 
 .delete-btn {
   border: 1px solid var(--primary-500);
   color: var(--primary-500);
+  position: absolute;
+  top: 0;
+}
+.info-btn:hover {
+  background-color: var(--primary-700);
 }
 .delete-btn:hover {
   background: var(--primary-500);

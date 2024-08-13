@@ -1,6 +1,11 @@
 const Loading = () => {
   return (
-    <div>Loading...</div>
-  )
-}
-export default Loading
+    <>
+      <div className="container">
+        <span>Loading...</span>
+        <div className="loading"></div>
+      </div>
+    </>
+  );
+};
+export default Loading;

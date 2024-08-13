@@ -1,18 +1,19 @@
-import Tour from "./Tour"
+import Tour from './Tour';
 
-const Tours = ({tours, setTours}) => {
-   const removeTour = (id)=> {
-    const newTours = tours.filter((tour) => tour.id !== id)
-    setTours(newTours)
-  }
- 
+const Tours = ({ tours, setTours }) => {
+  const removeTour = (id) => {
+    const newTours = tours.filter((tour) => tour.id !== id);
+    setTours(newTours);
+  };
+
   return (
-   <>
-   {tours.map((tour) => {
-      return <Tour key={tour.id} {...tour} removeTour={removeTour} />
-   })}
-      
-   </>
-  )
-}
-export default Tours
+    <>
+      <div className="tours">
+        {tours.map((tour) => {
+          return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
+        })}
+      </div>
+    </>
+  );
+};
+export default Tours;
